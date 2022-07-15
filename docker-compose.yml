@@ -11,6 +11,6 @@ services:
       dockerfile: compose/django/Dockerfile
     container_name: speakhunt_backend
     ports:
-      - "8099:8000"
+      - "7100:8000"
     command: python Call_Server.py
     restart: always
