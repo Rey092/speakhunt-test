@@ -1,0 +1,16 @@
+version: '3.3'
+
+volumes:
+  local_postgres_data:
+
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: compose/django/Dockerfile
+    container_name: speakhunt_backend
+    command: python Call_Server.py
+    ports:
+      - "8099:8000"
+    restart: always
